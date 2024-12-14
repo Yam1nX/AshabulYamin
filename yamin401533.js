@@ -167,10 +167,10 @@ document.addEventListener('DOMContentLoaded', function() {
         'image/chat_app.png',
         'image/cgpa_calculator.png',
         'image/bus_m_s.png',
-        'image/bus_m_s_2.png',
-        'image/bus_m_s_3.png',
+        'image/st.png',
+        'image/st2.png',
         'image/b_m.png',
-        'image/am_2.png',
+        'image/securebyte.png',
         'image/am.png',
         'image/am_3.png'
     ];
