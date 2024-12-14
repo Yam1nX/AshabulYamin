@@ -264,10 +264,53 @@ a:hover {
 
 /* Dark mode variables */
 .dark-mode {
-    --primary-color: #ff6600;
-    --secondary-color: hsl(54, 100%, 50%);
-    --text-color: #e5e7eb;
-    --background-color: #1a1a2e;
+     /* Core Brand Colors */
+    --primary-color: #14b8a6;      /* Primary color */
+    --primary-light: #5eead4;      /* Lighter primary color */
+    --primary-dark: #081203;       /* Darker primary color */
+    --secondary-color: #0D7C66;    /* Secondary color */
+    --secondary-light: #41B3A2;    /* Lighter secondary color */
+    --secondary-dark: #243642;     /* Darker secondary color */
+    --accent-color: #387478;       /* Accent color */
+    --accent-light: #BDE8CA;       /* Lighter accent color */
+    --accent-dark: #243642;        /* Darker accent color */
+
+    /* Text Colors */
+    --text-color: #18181b;         /* Primary text */
+    --text-muted: #4B5563;         /* Secondary text */
+    --text-light: #6B7280;         /* Tertiary text */
+    --text-bright: #111111;        /* High contrast text */
+
+    /* Background Colors */
+    --light-bg: #E2F1E7;           /* Light background */
+    --light-bg-hover: #f3e8ff;     /* Hover state for light bg */
+    --white: #ffffff;
+    --off-white: #F9FAFB;
+    --surface-1: #ffffff;          /* Primary surface */
+    --surface-2: #F8FAFC;          /* Secondary surface */
+    --surface-3: #F1F5F9;          /* Tertiary surface */
+
+    /* Status Colors */
+    --success: #059669;            /* Success states */
+    --warning: #D97706;            /* Warning states */
+    --error: #DC2626;              /* Error states */
+    --info: #2563EB;               /* Info states */
+
+    /* Animation & Transitions */
+    --transition-fast: 150ms cubic-bezier(0.4, 0, 0.2, 1);
+    --transition-normal: 250ms cubic-bezier(0.4, 0, 0.2, 1);
+    --transition-slow: 350ms cubic-bezier(0.4, 0, 0.2, 1);
+    --transition-bounce: 500ms cubic-bezier(0.68, -0.55, 0.265, 1.55);
+
+    /* Shadows */
+    --shadow-xs: 0 1px 2px rgba(67, 46, 84, 0.05);
+    --shadow-sm: 0 1px 3px rgba(67, 46, 84, 0.1), 0 1px 2px rgba(67, 46, 84, 0.06);
+    --shadow: 0 4px 6px -1px rgba(67, 46, 84, 0.1), 0 2px 4px -1px rgba(67, 46, 84, 0.06);
+    --shadow-md: 0 6px 10px -1px rgba(67, 46, 84, 0.1), 0 2px 4px -1px rgba(67, 46, 84, 0.06);
+    --shadow-lg: 0 10px 15px -3px rgba(67, 46, 84, 0.1), 0 4px 6px -2px rgba(67, 46, 84, 0.05);
+    --shadow-xl: 0 20px 25px -5px rgba(67, 46, 84, 0.1), 0 10px 10px -5px rgba(67, 46, 84, 0.04);
+    --shadow-2xl: 0 25px 50px -12px rgba(67, 46, 84, 0.25);
+    --shadow-inner: inset 0 2px 4px 0 rgba(67, 46, 84, 0.06);
 }
 
 
