@@ -326,7 +326,7 @@ const list = document.querySelectorAll('.navigation ul li');
 
         // Create a cube
         const geometry = new THREE.BoxGeometry();
-        const material = new THREE.MeshBasicMaterial({ color: 0xFF8C00, wireframe: true });
+        const material = new THREE.MeshBasicMaterial({ color: 0x0F766E, wireframe: true });
         const cube = new THREE.Mesh(geometry, material);
         scene.add(cube);
 
