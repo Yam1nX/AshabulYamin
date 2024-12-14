@@ -1,9 +1,265 @@
 :root {
-    --primary-color: #ff6600;
-    --secondary-color: hsl(54, 100%, 50%);
-    --text-color: #ffffff;
-    --background-color: #000000;
-    --glass-background: rgba(255, 255, 255, 0.1);
+    /* Core Brand Colors - Ultra Premium Palette */
+    --primary-color: #262626;      /* Rich noir - ultimate sophistication */
+    --primary-light: #404040;      /* Polished graphite for highlights */
+    --primary-dark: #171717;       /* Deep noir for emphasis */
+    --secondary-color: #937B5D;    /* Antique brass for secondary elements */
+    --secondary-light: #B39876;    /* Burnished gold for accents */
+    --secondary-dark: #725F48;     /* Aged brass for depth */
+    --accent-color: #A67C52;       /* Rich cognac for special emphasis */
+    --accent-light: #C69C6D;       /* Warm bronze for subtle accents */
+    --accent-dark: #855F3E;        /* Deep amber for strong emphasis */
+
+    /* Text Colors - Refined Elegance */
+    --text-color: #F5F5F4;         /* Luminous pearl for primary text */
+    --text-muted: #E7E5E4;         /* Silk white for secondary text */
+    --text-light: #D6D3D1;         /* Soft pearl for tertiary text */
+    --text-bright: #FFFFFF;        /* Pure white for high emphasis */
+
+    /* Background Colors - Premium Depth */
+    --dark-bg: #0A0A0A;            /* Absolute noir background */
+    --dark-bg-hover: #171717;      /* Premium noir for hover states */
+    --black: #000000;              /* True black for ultimate contrast */
+    --off-black: #0A0A0A;          /* Refined noir for cards */
+    --surface-1: #171717;          /* Primary surface - polished obsidian */
+    --surface-2: #262626;          /* Secondary surface - brushed steel */
+    --surface-3: #404040;          /* Tertiary surface - platinum */
+
+    /* Status Colors - Luxury Suite */
+    --success: #937B5D;            /* Antique brass success states */
+    --warning: #A67C52;            /* Cognac warnings */
+    --error: #8B4513;              /* Burnished copper errors */
+    --info: #737373;               /* Platinum information */
+
+    /* Premium Gradients */
+    --gradient-brand: linear-gradient(145deg, #262626, #937B5D);
+    --gradient-accent: linear-gradient(145deg, #937B5D, #A67C52);
+    --gradient-subtle: linear-gradient(to right, #171717, #262626);
+    --gradient-dark: linear-gradient(to bottom, #0A0A0A, #000000);
+
+    /* Elevated Glass Effect */
+    --glass-bg: rgba(23, 23, 23, 0.9);
+    --glass-border: rgba(245, 245, 244, 0.05);
+    --glass-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.6);
+
+    /* Enhanced Shadows */
+    --shadow-xs: 0 1px 2px rgba(0, 0, 0, 0.4);
+    --shadow-sm: 0 2px 4px rgba(0, 0, 0, 0.5);
+    --shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.5), 0 2px 4px -1px rgba(147, 123, 93, 0.12);
+    --shadow-md: 0 6px 10px -1px rgba(0, 0, 0, 0.6), 0 2px 4px -1px rgba(147, 123, 93, 0.18);
+    --shadow-lg: 0 10px 15px -3px rgba(0, 0, 0, 0.7), 0 4px 6px -2px rgba(147, 123, 93, 0.2);
+    --shadow-xl: 0 20px 25px -5px rgba(0, 0, 0, 0.7), 0 10px 10px -5px rgba(147, 123, 93, 0.2);
+    --shadow-2xl: 0 25px 50px -12px rgba(0, 0, 0, 0.8);
+    --shadow-inner: inset 0 2px 4px 0 rgba(0, 0, 0, 0.4);
+
+    /* Rest of the CSS properties remain unchanged */
+    /* (Border radius, spacing, typography, etc.) */
+    /* Border Radius - Consistent Curves */
+    --radius-xs: 3px;
+    --radius-sm: 5px;
+    --radius-md: 8px;
+    --radius-lg: 12px;
+    --radius-xl: 16px;
+    --radius-2xl: 20px;
+    --radius-full: 9999px;
+
+    /* Spacing Scale */
+    --spacing-3xs: 4px;
+    --spacing-2xs: 8px;
+    --spacing-xs: 12px;
+    --spacing-sm: 16px;
+    --spacing-md: 24px;
+    --spacing-lg: 32px;
+    --spacing-xl: 48px;
+    --spacing-2xl: 64px;
+    --spacing-3xl: 96px;
+
+    /* Typography - Premium Font Stack */
+    --font-family-sans: 'SF Pro Display', 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+    --font-family-serif: 'New York', 'Times New Roman', serif;
+    --font-family-mono: 'SF Mono', 'JetBrains Mono', Consolas, monospace;
+
+    /* Professional Font Sizes */
+    --text-xs: 0.75rem;    /* 12px */
+    --text-sm: 0.875rem;   /* 14px */
+    --text-base: 1rem;     /* 16px */
+    --text-lg: 1.125rem;   /* 18px */
+    --text-xl: 1.25rem;    /* 20px */
+    --text-2xl: 1.5rem;    /* 24px */
+    --text-3xl: 1.875rem;  /* 30px */
+    --text-4xl: 2.25rem;   /* 36px */
+
+    /* Font Weights - Clear Hierarchy */
+    --font-thin: 100;
+    --font-extralight: 200;
+    --font-light: 300;
+    --font-normal: 400;
+    --font-medium: 500;
+    --font-semibold: 600;
+    --font-bold: 700;
+    --font-extrabold: 800;
+
+    /* Line Heights - Improved Readability */
+    --leading-none: 1;
+    --leading-tight: 1.25;
+    --leading-snug: 1.375;
+    --leading-normal: 1.5;
+    --leading-relaxed: 1.625;
+    --leading-loose: 2;
+
+    /* Z-index Scale */
+    --z-negative: -1;
+    --z-0: 0;
+    --z-10: 10;
+    --z-20: 20;
+    --z-30: 30;
+    --z-40: 40;
+    --z-50: 50;
+    --z-max: 999999;
+
+    /* Container Widths */
+    --container-sm: 640px;
+    --container-md: 768px;
+    --container-lg: 1024px;
+    --container-xl: 1280px;
+}
+
+/* Base Styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+
+/* Premium Body Defaults */
+body {
+    background: var(--gradient-dark);
+    color: var(--text-color);
+    font-family: var(--font-family-sans);
+    line-height: var(--leading-normal);
+    font-size: var(--text-base);
+    min-height: 100vh;
+}
+
+/* Luxury Glass Effect */
+.glass {
+    background: var(--glass-bg);
+    backdrop-filter: blur(20px);
+    -webkit-backdrop-filter: blur(20px);
+    border: 1px solid var(--glass-border);
+    box-shadow: var(--glass-shadow);
+}
+
+/* Premium Focus Styles */
+:focus-visible {
+    outline: 2px solid var(--secondary-light);
+    outline-offset: 2px;
+    box-shadow: var(--shadow-sm);
+}
+
+/* Enhanced Selection Styles */
+::selection {
+    background-color: var(--secondary-color);
+    color: var(--text-bright);
+}
+
+/* Luxury Card Component */
+.card {
+    background-color: var(--surface-1);
+    border-radius: var(--radius-lg);
+    box-shadow: var(--shadow-lg);
+    border: 1px solid var(--surface-2);
+}
+
+/* Premium Button */
+.button {
+    background-color: var(--primary-color);
+    color: var(--text-bright);
+    padding: var(--spacing-xs) var(--spacing-sm);
+    border-radius: var(--radius-md);
+    font-weight: var(--font-medium);
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    border: 1px solid var(--surface-2);
+}
+
+.button:hover {
+    background-color: var(--primary-dark);
+    box-shadow: var(--shadow-md);
+    border-color: var(--secondary-color);
+}
+
+/* Premium Interactive States */
+.button:active {
+    transform: translateY(1px);
+    box-shadow: var(--shadow-sm);
+}
+
+/* Energy Card */
+.card-energy {
+    background: var(--surface-1);
+    border-radius: 12px;
+    padding: 1.5rem;
+    border: 1px solid rgba(249, 115, 22, 0.1);
+    box-shadow: var(--shadow-md);
+    transition: all var(--transition-energy);
+}
+
+.card-energy:hover {
+    transform: translateY(-3px);
+    box-shadow: var(--shadow-lg), var(--glow-sm);
+    border-color: rgba(249, 115, 22, 0.2);
+}
+
+/* Flash Effect */
+.flash {
+    position: relative;
+}
+
+.flash::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(45deg, transparent, rgba(255, 255, 255, 0.6), transparent);
+    transform: translateX(-100%);
+    animation: flash 1.5s infinite;
+}
+
+@keyframes flash {
+    100% {
+        transform: translateX(100%);
+    }
+}
+
+/* Energetic Links */
+a {
+    color: var(--primary-color);
+    text-decoration: none;
+    transition: all var(--transition-flash);
+    position: relative;
+}
+
+a:hover {
+    color: var(--primary-dark);
+    text-shadow: var(--glow-sm);
+}
+
+/* Focus States with Energy */
+:focus-visible {
+    outline: 2px solid var(--primary-color);
+    outline-offset: 2px;
+    box-shadow: var(--glow-sm);
+}
+
+/* Selection with Glow */
+::selection {
+    background-color: var(--primary-color);
+    color: white;
+    text-shadow: var(--glow-sm);
 }
 
 /* Dark mode variables */
