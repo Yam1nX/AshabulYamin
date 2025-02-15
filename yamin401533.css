@@ -924,17 +924,17 @@ h2 {
     transition: color 0.3s ease, transform 0.3s ease;
     text-align: center;
     padding: 0.5rem 1rem;
-    border: 1px solid var(--brand-primary-dark); /* Professional Green */
+    border: 1.3px solid var(--brand-primary-dark); /* Professional Green */
     border-radius: 0.5rem; /* Medium radius */
     display: inline-block;
     margin: 0 auto; /* Center the element horizontally */
 }
 
 .project-link:hover {
-    color: var(--brand-secondary-light); /* Slate */
-    border-color: var(--brand-secondary-light); /* Slate */
+    color: var(--brand-secondary-dark); /* Slate */
+    border-color: var(--brand-primary-dark); /* Slate */
     transform: translateY(-3px);
-    background-color: var(--brand-primary); /* Professional Green */
+    background-color: var(--brand-primary-dark); /* Professional Green */
 }
 
 .project-tools {
