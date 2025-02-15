@@ -2,81 +2,52 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="icon" href="image/logo.jpg" type="image/x-icon">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="icon" type="image/jpg" href="logo.svg"/>
     <title>Yamin</title>
     <link rel="stylesheet" href="yamin401533.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
 </head>
 <body>
+    <!-- Stars Background -->
     <div id="stars-container"></div>
-    <div class="cube-container" id="cubeContainer"></div>
-    <div class="content">
-        
-    </div>
 
-    <div id="stars"></div>
-    <div id="stars2"></div>
-    <div id="stars3"></div>
+    <!-- Cube Background -->
+    <div class="cube-container" id="cubeContainer"></div>
+
+    <!-- Main Content -->
     <div class="container">
+        <!-- Header and Navbar -->
         <header>
             <nav id="navbar">
-                <div class="logo"><a href="#hero"><img class="logo-img" src="image/logo.svg" alt="Yamin"></a></div>
+                <div class="logo">
+                    <a href="#hero"><img class="logo-img" src="image/logo.svg" alt="Yamin"></a>
+                </div>
                 <div class="navigation">
                     <ul>
-                        <li class="active an">
-                            <a href="#hero">
-                                <span class="icon"><i class="fas fa-home"></i></span>
-                                <span class="text">Home</span>
-                            </a>
-                        </li>
-                        <li class="an">
-                            <a href="#about">
-                                <span class="icon"><i class="fas fa-user"></i></span>
-                                <span class="text">About</span>
-                            </a>
-                        </li>
-                        <li class="an">
-                            <a href="#education">
-                                <span class="icon"><i class="fas fa-graduation-cap"></i></span>
-                                <span class="text">Education</span>
-                            </a>
-                        </li>
-                        <li class="an">
-                            <a href="#skills">
-                                <span class="icon"><i class="fas fa-cogs"></i></span>
-                                <span class="text">Skills</span>
-                            </a>
-                        </li>
-                        <li class="an">
-                            <a href="#projects">
-                                <span class="icon"><i class="fas fa-project-diagram"></i></span>
-                                <span class="text">Projects</span>
-                            </a>
-                        </li>
-                        <li class="an">
-                            <a href="#activities">
-                                <span class="icon"><i class="fas fa-calendar-check"></i></span>
-                                <span class="text">Activities</span>
-                            </a>
-                        </li>
-                        <li class="an">
-                            <a href="#contact">
-                                <span class="icon"><i class="fas fa-address-card"></i></span>
-                                <span class="text">Contact</span>
-                            </a>
-                        </li>
+                        <li class="active"><a href="#hero"><i class="fas fa-home"></i> Home</a></li>
+                        <li><a href="#about"><i class="fas fa-user"></i> About</a></li>
+                        <li><a href="#education"><i class="fas fa-graduation-cap"></i> Education</a></li>
+                        <li><a href="#skills"><i class="fas fa-cogs"></i> Skills</a></li>
+                        <li><a href="#projects"><i class="fas fa-project-diagram"></i> Projects</a></li>
+                        <li><a href="#activities"><i class="fas fa-calendar-check"></i> Activities</a></li>
+                        <li><a href="#contact"><i class="fas fa-address-card"></i> Contact</a></li>
                     </ul>
                 </div>
-                <div class="menu-toggle">
-                    <i class="fas fa-bars"></i>
+                <div class="menu-toggle" id="menuToggle">
+                    <div class="hamburger">
+                        <span class="bar"></span>
+                        <span class="bar"></span>
+                        <span class="bar"></span>
+                    </div>
                 </div>
                 <div class="theme-toggle">🌓</div>
             </nav>
         </header>
 
+        <!-- Main Sections -->
         <main>
+            <!-- Hero Section -->
             <section id="hero" class="glass-box">
                 <div class="hero-content">
                     <div class="text-content">
@@ -105,20 +76,20 @@
                 </div>
             </section>
 
+            <!-- About Section -->
             <section id="about" class="glass-box">
                 <h2>About Me</h2>
                 <div class="about-content">
                     <div class="hero-image-container">
-                <img src="image/yamin.jpg" alt="Ashabul Yamin Tuhin" class="hero-image">
-            </div>
+                        <img src="image/yamin.jpg" alt="Ashabul Yamin Tuhin" class="hero-image">
+                    </div>
                     <div class="about-text">
-                        <p>Hi, I'm Yamin, a second-year Computer Science and Engineering student with a passion for competitive programming and frontend development. My technical skills include C++, Java, and various web technologies.
-                        I'm particularly enthusiastic about quantum computing and its potential to revolutionize the tech industry. As a dedicated learner and problem-solver, I constantly seek opportunities to apply my knowledge to innovative projects.
-                        I excel in team environments and possess strong communication skills. Currently, I'm actively seeking internships and entry-level positions to further my experience in software development, AI, and quantum computing.</p>
+                        <p>Hi, I'm Yamin, a second-year Computer Science and Engineering student with a passion for competitive programming and frontend development. My technical skills include C++, Java, and various web technologies. I'm particularly enthusiastic about quantum computing and its potential to revolutionize the tech industry. As a dedicated learner and problem-solver, I constantly seek opportunities to apply my knowledge to innovative projects. I excel in team environments and possess strong communication skills. Currently, I'm actively seeking internships and entry-level positions to further my experience in software development, AI, and quantum computing.</p>
                     </div>
                 </div>
             </section>
 
+            <!-- Education Section -->
             <section id="education" class="glass-box">
                 <h2>Education</h2>
                 <div class="timeline">
@@ -126,20 +97,20 @@
                         <div class="timeline-content">
                             <h3>Bachelor's, Computer Science & Engineering</h3>
                             <p>International Islamic University Chittagong</p>
-                            <p class="date">JUNE 2023 - Present</p>
+                            <p class="date">June 2023 - Present</p>
                         </div>
-                        
-                    </div><br>
+                    </div>
                     <div class="timeline-item">
                         <div class="timeline-content">
                             <h3>HSC</h3>
                             <p>Chattogram Cantonment Public College</p>
-                            <p class="date">JULY 2020 - JANUARY 2023</p>
+                            <p class="date">July 2020 - January 2023</p>
                         </div>
                     </div>
                 </div>
-            </section>
+            </section> 
 
+            <!-- Skills Section -->
             <section id="skills" class="glass-box">
                 <h2>Skills</h2>
                 <div class="skills-container">
@@ -153,7 +124,7 @@
                             <i class="fab fa-java"></i>
                             <span>Java</span>
                         </div>
-                        <div class="skill-item" data-skill="Java">
+                        <div class="skill-item" data-skill="JavaScript">
                             <i class="fab fa-js"></i>
                             <span>JavaScript</span>
                         </div>
@@ -171,10 +142,6 @@
                         <div class="skill-item" data-skill="Tailwind">
                             <i class="fab fa-css3"></i>
                             <span>Tailwind CSS</span>
-                        </div>
-                        <div class="skill-item" data-skill="JavaScript">
-                            <i class="fab fa-js"></i>
-                            <span>JavaScript</span>
                         </div>
                         <div class="skill-item" data-skill="React">
                             <i class="fab fa-react"></i>
@@ -195,173 +162,179 @@
                 </div>
             </section>
 
-    <section id="projects" class="glass-box">
-    <h2>Projects <a href="https://github.com/yamin401533" target="_blank" class="social-icon"><i class="fab fa-github"></i></a></h2>
-    <div class="projects-grid">
-        
-    
-    <div class="project-card" data-project="cgpa-calc">
-        <div class="project-image" style="background-image: url('image/am_2.png');">
-            <video class="video-player" controls style="display: none;">
-                <source src="image/dhamaka.mp4" type="video/mp4">
-                Your browser does not support the video tag.
-            </video>
-            <div class="play-button">
-                <svg viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg">
-                    <circle cx="100" cy="100" r="90" fill="none" stroke="#fff" stroke-width="15" />
-                    <polygon points="70, 100 100, 70 100, 130" fill="#fff" />
-                </svg>
-            </div>
-        </div>
-        <div class="project-content">
-            <h3>React Project: slytherin</h3>
-            <p>Slytherin - a React-based project dedicated to exploring the magical creatures of the Harry Potter universe.</p><br>
-            <a href="https://github.com/yamin-401533/slytherin.git" style="font-size: 17px;" target="_blank" class="social-icon"><i class="fab fa-github"></i> View my Project on GitHub</a>
-        </div>
-    </div>
-    <div class="project-card" data-project="cgpa-calc">
-        <div class="project-image" style="background-image: url('image/securebyte.png');">
-            <video class="video-player" controls style="display: none;">
-                <source src="image/dhamak.mp4" type="video/mp4">
-                Your browser does not support the video tag.
-            </video>
-            <div class="play-button">
-                <svg viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg">
-                    <circle cx="100" cy="100" r="90" fill="none" stroke="#fff" stroke-width="15" />
-                    <polygon points="70, 100 100, 70 100, 130" fill="#fff" />
-                </svg>
-            </div>
-        </div>
-        <div class="project-content">
-            <h3>SecureByte</h3>
-            <p>SecureByte Cybersecurity🛡️ - a frontend website for SeureByte Online learning platgorm </p><br>
-            <a href="https://yamin-401533.github.io/secureByte-cybersecurity/"View my Project on GitHub" style="font-size: 17px;" target="_blank" class="social-icon">live Project link: <i class="fab fa-github"></i></a>
-        </div>
-    </div>
 
-        
-    <div class="project-card" data-project="amazon">
-        <div class="project-image" style="background-image: url('image/st.png');">
-        <video class="video-player" controls style="display: none;">
-            <source src="image/amazo.mp4" type="video/mp4">
-            Your browser does not support the video tag.
-        </video>
-        <div class="play-button">
-            <svg viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg">
-                <circle cx="100" cy="100" r="90" fill="none" stroke="#fff" stroke-width="15" />
-                <polygon points="70, 100 100, 70 100, 130" fill="#fff" />
-            </svg>
-        </div>
-        </div>
-        <div class="project-content">
-        <h3>slytherinTech</h3>
-        <p>slytherinTech - a frontend e-commerce website, offering a wide range of tech products including smartphones, tablets, laptops, smartwatches, and more. </p><br>
-        <a href="https://yamin-401533.github.io/slytherinTech/"View my Project on GitHub" style="font-size: 17px;" target="_blank" class="social-icon">live Project link: <i class="fab fa-github"></i></a>
-        </div>
-    </div>
+            <!-- Projects Section -->
+            <section id="projects" class="glass-box">
+                <h2>Projects <a href="https://github.com/yamin401533" target="_blank" class="social-icon"><i class="fab fa-github"></i></a></h2>
+                <div class="projects-grid">
+                    <div class="project-card" data-project="cgpa-calc">
+                        <div class="project-image" style="background-image: url('image/am_2.png');">
+                            <video class="video-player" controls style="display: none;">
+                                <source src="image/dhamaka.mp4" type="video/mp4">
+                                Your browser does not support the video tag.
+                            </video>
+                            <div class="play-button">
+                                <svg viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg">
+                                    <circle cx="100" cy="100" r="90" fill="none" stroke="#fff" stroke-width="15" />
+                                    <polygon points="70, 100 100, 70 100, 130" fill="#fff" />
+                                </svg>
+                            </div>
+                        </div>
+                        <div class="project-content">
+                            <h3>React Project: Slytherin</h3>
+                            <p>Slytherin - a React-based project dedicated to exploring the magical creatures of the Harry Potter universe.</p>
+                            <div class="project-tools">
+                                <span>React</span>
+                                <span>JavaScript</span>
+                                <span>CSS</span>
+                            </div>
+                            <a href="https://slytherine.netlify.app/" style="font-size: 17px;" target="_blank" class="project-link">Live Demo</a>
+                        </div>
+                    </div>
+                    <div class="project-card" data-project="securebyte">
+                        <div class="project-image" style="background-image: url('image/securebyte.png');">
+                            <video class="video-player" controls style="display: none;">
+                                <source src="image/dhamak.mp4" type="video/mp4">
+                                Your browser does not support the video tag.
+                            </video>
+                            <div class="play-button">
+                                <svg viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg">
+                                    <circle cx="100" cy="100" r="90" fill="none" stroke="#fff" stroke-width="15" />
+                                    <polygon points="70, 100 100, 70 100, 130" fill="#fff" />
+                                </svg>
+                            </div>
+                        </div>
+                        <div class="project-content">
+                            <h3>SecureByte</h3>
+                            <p>SecureByte Cybersecurity🛡️ - a frontend website for SecureByte Online learning platform.</p>
+                            <div class="project-tools">
+                                <span>HTML</span>
+                                <span>CSS</span>
+                                <span>JavaScript</span>
+                            </div>
+                            <a href="https://yamin-401533.github.io/secureByte-cybersecurity/" style="font-size: 17px;" target="_blank" class="project-link">Live Demo</a>
+                        </div>
+                    </div>
+                    <div class="project-card" data-project="amazon">
+                        <div class="project-image" style="background-image: url('image/st.png');">
+                            <video class="video-player" controls style="display: none;">
+                                <source src="image/amazo.mp4" type="video/mp4">
+                                Your browser does not support the video tag.
+                            </video>
+                            <div class="play-button">
+                                <svg viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg">
+                                    <circle cx="100" cy="100" r="90" fill="none" stroke="#fff" stroke-width="15" />
+                                    <polygon points="70, 100 100, 70 100, 130" fill="#fff" />
+                                </svg>
+                            </div>
+                        </div>
+                        <div class="project-content">
+                            <h3>SlytherinTech</h3>
+                            <p>SlytherinTech - a frontend e-commerce website, offering a wide range of tech products including smartphones, tablets, laptops, smartwatches, and more.</p>
+                            <div class="project-tools">
+                                <span>HTML</span>
+                                <span>CSS</span>
+                                <span>JavaScript</span>
+                            </div>
+                            <a href="https://yamin-401533.github.io/slytherinTech/" style="font-size: 17px;" target="_blank" class="project-link">Live Demo</a>
+                        </div>
+                    </div>
+                    <div class="project-card" data-project="chattalicious">
+                        <div class="project-image" style="background-image: url('image/ct.jpeg');"></div>
+                        <div class="project-content">
+                            <h3>Chattalicious</h3>
+                            <p>A modern restaurant platform built with React, featuring dynamic menus, real-time ordering system, table reservations.</p>
+                            <div class="project-tools">
+                                <span>React</span>
+                                <span>JavaScript</span>
+                                <span>CSS</span>
+                            </div>
+                            <a href="https://chttalicious.netlify.app/" style="font-size: 17px;" target="_blank" class="project-link">Live Demo</a>
+                        </div>
+                    </div>
+                    <div class="project-card" data-project="chat-app">
+                        <div class="project-image" style="background-image: url('image/chat_app.png');">
+                            <video class="video-player" controls style="display: none;">
+                                <source src="image/WE-cHaT.mp4" type="video/mp4">
+                                Your browser does not support the video tag.
+                            </video>
+                            <div class="play-button">
+                                <svg viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg">
+                                    <circle cx="100" cy="100" r="90" fill="none" stroke="#fff" stroke-width="15" />
+                                    <polygon points="70, 100 100, 70 100, 130" fill="#fff" />
+                                </svg>
+                            </div>
+                        </div>
+                        <div class="project-content">
+                            <h3>Java Project: Chat Application</h3>
+                            <p>A real-time chat application built with Java and WebSocket.</p>
+                            <div class="project-tools">
+                                <span>Java</span>
+                                <span>WebSocket</span>
+                            </div>
+                            <a href="https://github.com/yamin-401533/Java_Project.git" style="font-size: 17px;" target="_blank" class="project-link"><i class="fab fa-github"></i> View my Project on GitHub</a>
+                        </div>
+                    </div>
+                    <div class="project-card" data-project="bus-system">
+                        <div class="project-image" style="background-image: url('image/bus_m_s.png');"></div>
+                        <div class="project-content">
+                            <h3>Bus Management System</h3>
+                            <p>A desktop application built using Qt C++ framework.</p>
+                            <div class="project-tools">
+                                <span>C++</span>
+                                <span>Qt</span>
+                            </div>
+                            <a href="https://github.com/yamin-401533/Bus_Management_System.git" style="font-size: 17px;" target="_blank" class="project-link"><i class="fab fa-github"></i> View my Project on GitHub</a>
+                        </div>
+                    </div>
+                </div>
+            </section>
 
 
-    <div class="project-card" data-project="bus-system">
-            <div class="project-image" style="background-image: url(image/ct.jpeg);"></div>
-            <div class="project-content">
-                <h3>Chattalicious</h3>
-                <p>A modern restaurant platform built with React, featuring dynamic menus, real-time ordering system, table reservations.</p><br>
-                <a href="https://github.com/yamin-401533/Bus_Management_System.git" style="font-size: 17px;" target="_blank" class="social-icon"><i class="fab fa-github"></i> View my Project on GitHub</a>
-            </div>
-    </div>
-
-    <div class="project-card" data-project="chat-app">
-        <div class="project-image" style="background-image: url('image/chat_app.png');">
-            <video class="video-player" controls style="display: none;">
-                <source src="image/WE-cHaT.mp4" type="video/mp4">
-                Your browser does not support the video tag.
-            </video>
-            <div class="play-button">
-                <svg viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg">
-                    <circle cx="100" cy="100" r="90" fill="none" stroke="#fff" stroke-width="15" />
-                    <polygon points="70, 100 100, 70 100, 130" fill="#fff" />
-                </svg>
-            </div>
-    </div>
-    <div class="project-content">
-            <h3>Java Project: Chat Application</h3>
-            <p>A real-time chat application built with Java and WebSocket.</p><br>
-            <a href="https://github.com/yamin-401533/Java_Project.git" style="font-size: 17px;" target="_blank" class="social-icon"><i class="fab fa-github"></i> View my Project on GitHub</a>
-        </div>
-    </div>
-        
-</div>
-
-</section>
-
- <section id="activities" class="glass-box">
-       <h2>Activities</h2>
-        <ul class="activities-list">
-        <div class="skill-category">
-                        <div class="skill-item" data-skill="C/C++">
+            <!-- Activities Section -->
+            <section id="activities" class="glass-box">
+                <h2>Activities</h2>
+                <ul class="activities-list">
+                    <div class="skill-category">
+                        <div class="skill-item" data-skill="Microsoft">
                             <i class="fab fa-microsoft"></i>
                             <span>Microsoft Learn Student Ambassador @Microsoft</span>
                         </div>
-                        <div class="skill-item" data-skill="Java">
-                            <img src="image/theheadstarter_logo.jpeg" style="height: 25PX;width: 25PX;"><span>Software Engineering Fellow @Headstarter AI</span>
-             </div>
-       </div>
-       </ul>
-</section>
+                        <div class="skill-item" data-skill="Headstarter">
+                            <img src="image/theheadstarter_logo.jpeg" style="height: 25px; width: 25px;">
+                            <span>Software Engineering Fellow @Headstarter AI</span>
+                        </div>
+                    </div>
+                </ul>
+            </section>
 
-<section id="contact" class="glass-box">      
-<div style="position: relative;" class="s-m">
-<h2>Contact </h2>
-<div class="social-menu">
-<div class="toggle"><span><i class="fa-solid fa-cube" style="color: rgb(0, 255, 213);"></i></span></div>
-    <!-- <li style="--i:0;">
-    <a href="#"><i class="fab fa-facebook"></i></a>
-    </li> -->
-    <li style="--i:1;">
-    <a href="https://x.com/yamin401533"><i class="fa-brands fa-twitter" style="color: rgb(0, 255, 213);"></i></a>
-    </li>
-    <li style="--i:2;">
-    <a href="#"><i class="fab fa-instagram" style="color: rgb(0, 255, 213);"></i></a>
-    </li>
-    <li style="--i:3;">
-    <a href="https://github.com/yamin401533"><i class="fab fa-github" style="color: rgb(0, 255, 213);"></i></a>
-    </li>
-    <li style="--i:4;">
-    <a href="https://www.youtube.com/channel/UCoai-4d3UvWhC0WuyugWbhg"><i class="fab fa-youtube"  style="color: rgb(0, 255, 213);"></i></a>
-    </li>
-    <li style="--i:5;">
-    <a href="https://linktr.ee/yamin401533"><i class="fas fa-code"  style="color: rgb(0, 255, 213);"></i></a>
-    </li>
-    <li style="--i:6;">
-    <a href="https://www.linkedin.com/in/yamin401533"><i class="fab fa-linkedin"  style="color: rgb(0, 255, 213);"></i></a>
-    </li>
-    <li style="--i:7;">
-    <a href="https://gitlab.com/yamin401533"><i class="fab fa-gitlab"  style="color: rgb(0, 255, 213);"></i></a>
-    </li>
-</div>
-</div>
+            <!-- Contact Section -->
+            <section id="contact" class="glass-box">
+                <h2>Contact</h2>
+                <form id="contact-form">
+                    <input type="text" name="name" placeholder="Your Name" required>
+                    <input type="email" name="email" placeholder="Your Email" required>
+                    <textarea name="message" placeholder="Your Message" required></textarea>
+                    <button type="submit">Send Message <i class="fa-solid fa-paper-plane"></i></button>
+                </form>
+            </section>
+        </main>
 
-<form id="contact-form">
-    <input type="text" name="name" placeholder="Your Name" required>
-    <input type="email" name="email" placeholder="Your Email" required>
-    <textarea name="message" placeholder="Your Message" required></textarea>
-    <button type="submit">Send Message<i class="fa-solid fa-paper-plane"></i></button>
-</form>
-</section>
-</main>
-
-<footer class="glass-box" style="margin-bottom: 0px;">
-        <div class="social-links">
-            <a href="https://www.linkedin.com/in/yamin401533" target="_blank" class="social-icon"><i class="fab fa-linkedin"></i></a>
-            <a href="https://github.com/yamin401533" target="_blank" class="social-icon"><i class="fab fa-github"></i></a>
-            <a href="https://gitlab.com/yamin401533" target="_blank" class="social-icon"><i class="fab fa-gitlab"></i></a>
-            <a href="https://x.com/yamin401533" target="_blank" class="social-icon"><i class="fa-brands fa-twitter"></i></a>
-            <a href="ashabulyamintuhin@gmail.com" target="_blank" class="social-icon"><i class="fa-solid fa-envelope"></i></a>
-            <a href="https://linktr.ee/yamin401533" target="_blank" class="social-icon"><i class="fas fa-code"></i></a>
-        </div>
-    <p>&copy; 2024 Ashabul Yamin. All rights reserved.</p>
-</footer>
+        <!-- Footer -->
+        <footer class="glass-box">
+            <div class="social-links">
+                <a href="https://www.linkedin.com/in/yamin401533" target="_blank" class="social-icon"><i class="fab fa-linkedin"></i></a>
+                <a href="https://github.com/yamin-401533" target="_blank" class="social-icon"><i class="fab fa-github"></i></a>
+                <a href="https://gitlab.com/yamin401533" target="_blank" class="social-icon"><i class="fab fa-gitlab"></i></a>
+                <a href="https://x.com/yamin401533" target="_blank" class="social-icon"><i class="fab fa-twitter"></i></a>
+                <a href="mailto:ashabulyamintuhin@gmail.com" target="_blank" class="social-icon"><i class="fas fa-envelope"></i></a>
+                <a href="https://linktr.ee/yamin401533" target="_blank" class="social-icon"><i class="fas fa-code"></i></a>
+            </div>
+            <p>&copy; 2024 Ashabul Yamin. All rights reserved.</p>
+        </footer>
     </div>
+
+    <!-- Scripts -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
     <script src="yamin401533.js"></script>
     <script src="https://unpkg.com/typewriter-effect@latest/dist/core.js"></script>
