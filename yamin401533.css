@@ -1648,7 +1648,7 @@ a {
     display: flex;
     align-items: center;
     justify-content: center;
-    height: 76vh;
+    height: 70vh;
     background: linear-gradient(135deg, rgba(255, 255, 255, 0.1) 0%, rgba(255, 255, 255, 0.05) 100%);
     backdrop-filter: blur(15px);
     border-radius: 20px;
@@ -1779,7 +1779,7 @@ a {
 
 @media screen and (max-width: 480px) {
     .contact-item {
-        font-size: 0.6rem;
-        padding: 0.2rem;
+        font-size: 0.7rem;
+        padding: 0.3rem;
     }
 }
