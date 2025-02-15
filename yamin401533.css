@@ -399,6 +399,11 @@ header.scrolled {
 
   .navigation.active {
     right: 0;
+    background-color: var(--brand-primary-dark);
+    height: 65vh;
+    width: auto;
+    border: #09332d;
+    border-radius: 12px 0px 0px 12px;
   }
 
   .navigation ul {
