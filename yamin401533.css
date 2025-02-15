@@ -782,6 +782,7 @@ footer {
     .about-content {
         flex-direction: column;
         text-align: center;
+        font-size: 0.65rem;
     }
 
     .projects-grid {
