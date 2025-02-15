@@ -705,7 +705,7 @@ h2 {
     position: relative;
     width: 45%;
     padding: var(--space-4);
-    background: var(--surface-base);
+    background: var(--surface-elevated);
     border-radius: var(--radius-md);
     box-shadow: var(--shadow-md);
     transition: transform var(--transition-normal), box-shadow var(--transition-normal);
@@ -765,21 +765,20 @@ h2 {
 }
 
 .skill-item {
-    background: var(--surface-elevated);
     padding: 1rem 1.5rem;
-    border-radius: 12px;
+    background: var(--surface-elevated);
+    border-radius: var(--radius-md);
+    box-shadow: var(--shadow-md);
+    transition: transform var(--transition-normal), box-shadow var(--transition-normal);
     display: flex;
     align-items: center;
     gap: 1rem;
     margin-bottom: 1rem;
-    transition: var(--transition-smooth);
-    border: 1px solid #0c131f;
 }
 
 .skill-item:hover {
-    transform: translateX(8px);
-    background: var(--surface-overlay);
-    border-color: var(--brand-primary);
+    transform: translateX(5px);
+    box-shadow: var(--shadow-lg);
 }
 
 .skill-item i {
