@@ -6,21 +6,27 @@ document.addEventListener('DOMContentLoaded', function() {
     });
 
     // Mobile menu toggle
-    // const menuToggle = document.querySelector('.menu-toggle');
-    // const navMenu = document.querySelector('nav ul');
-    // menuToggle.addEventListener('click', () => {
-    //     navMenu.classList.toggle('show');
-    // });
+    const menuToggle = document.querySelector('.menu-toggle');
+    const navMenu = document.querySelector('nav ul');
+    const overlay = document.createElement('div');
+    overlay.className = 'overlay';
+    document.body.appendChild(overlay);
 
-    document.addEventListener('DOMContentLoaded', function() {
-        const menuToggle = document.querySelector('.menu-toggle');
-        const navMenu = document.querySelector('nav ul');
+    function toggleMenu() {
+        navMenu.classList.toggle('show');
+        overlay.classList.toggle('active');
+        menuToggle.classList.toggle('active');
+    }
 
-        menuToggle.addEventListener('click', function() {
-            navMenu.classList.toggle('show');
-        });
+    menuToggle.addEventListener('click', toggleMenu);
+    overlay.addEventListener('click', toggleMenu);
+
+    // Close menu when clicking outside
+    document.addEventListener('click', (e) => {
+        if (!navMenu.contains(e.target) && !menuToggle.contains(e.target) && navMenu.classList.contains('show')) {
+            toggleMenu();
+        }
     });
-
 
     // Sticky header
     const header = document.querySelector('header');
@@ -74,23 +80,24 @@ document.addEventListener('DOMContentLoaded', function() {
             card.style.setProperty('--mouse-y', `${y}px`);
         });
     });
+
     document.querySelectorAll('.play-button').forEach(button => {
-            button.addEventListener('click', function() {
-                const card = this.closest('.project-card');
-                const video = card.querySelector('.video-player');
-                const image = card.querySelector('.project-image');
-                
-                if (video.style.display === 'none') {
-                    video.style.display = 'block';
-                    image.style.backgroundImage = 'none';
-                    video.play();
-                } else {
-                    video.style.display = 'none';
-                    image.style.backgroundImage = image.getAttribute('data-bg');
-                    video.pause();
-                }
-            });
+        button.addEventListener('click', function() {
+            const card = this.closest('.project-card');
+            const video = card.querySelector('.video-player');
+            const image = card.querySelector('.project-image');
+            
+            if (video.style.display === 'none') {
+                video.style.display = 'block';
+                image.style.backgroundImage = 'none';
+                video.play();
+            } else {
+                video.style.display = 'none';
+                image.style.backgroundImage = image.getAttribute('data-bg');
+                video.pause();
+            }
         });
+    });
 
     // Form submission
     const contactForm = document.getElementById('contact-form');
@@ -153,253 +160,170 @@ function generateStars() {
     }
 }
 
-
-
-
-document.addEventListener('DOMContentLoaded', function() {
-    const projectCards = document.querySelectorAll('.project-card');
-    const showcaseImage = document.querySelector('.showcase-image');
-    const prevButton = document.querySelector('.nav-button.prev');
-    const nextButton = document.querySelector('.nav-button.next');
-
-    let currentIndex = 0;
-    const projectImages = [
-        'image/chat_app.png',
-        'image/cgpa_calculator.png',
-        'image/bus_m_s.png',
-        'image/st.png',
-        'image/st2.png',
-        'image/b_m.png',
-        'image/securebyte.png',
-        'image/am.png',
-        'image/am_3.png'
-    ];
-
-    function updateShowcaseImage(direction = 'next') {
-        showcaseImage.style.opacity = '0';
-        showcaseImage.style.transform = direction === 'next' ? 'translateX(50%)' : 'translateX(-50%)';
-
-        setTimeout(() => {
-            showcaseImage.style.backgroundImage = `url(${projectImages[currentIndex]})`;
-            showcaseImage.style.opacity = '1';
-            showcaseImage.style.transform = 'translateX(0)';
-        });
-    }
-
-    function nextImage() {
-        currentIndex = (currentIndex + 1) % projectImages.length;
-        updateShowcaseImage('next');
-    }
-
-    function prevImage() {
-        currentIndex = (currentIndex - 1 + projectImages.length) % projectImages.length;
-        updateShowcaseImage('prev');
-    }
-
-    let intervalId;
-
-    function startAutoPlay() {
-        clearInterval(intervalId);
-        intervalId = setInterval(nextImage, 3000); // Change image every 15 seconds
-    }
-
-    function handleManualNavigation() {
-        clearInterval(intervalId);
-        setTimeout(startAutoPlay, 3000); // Resume auto-play after 15 seconds
-    }
-
-    nextButton.addEventListener('click', () => {
-        nextImage();
-        handleManualNavigation();
-    });
-
-    prevButton.addEventListener('click', () => {
-        prevImage();
-        handleManualNavigation();
-    });
-
-    projectCards.forEach((card, index) => {
-        card.addEventListener('click', () => {
-            currentIndex = index;
-            updateShowcaseImage();
-            handleManualNavigation();
-        });
-    });
-
-    // Initial showcase image and start auto-play
-    updateShowcaseImage();
-    startAutoPlay();
-    
-
-    
-
-    projectCards.forEach(function(projectCard) {
-    var projectImage = projectCard.querySelector('.project-image');
-    var videoPlayer = projectCard.querySelector('.video-player');
-    var playButton = projectCard.querySelector('.play-button');
-
-    if (playButton && videoPlayer) {
-        playButton.addEventListener('click', function() {
-            videoPlayer.style.display = 'block';
-            projectImage.style.backgroundImage = 'none';
-            playButton.style.display = 'none';
-            videoPlayer.play();
-        });
-
-        videoPlayer.addEventListener('ended', function() {
-            this.style.display = 'none';
-            var projectType = projectCard.dataset.project;
-            var backgroundImage;
-            
-            switch(projectType) {
-                case 'chat-app':
-                    backgroundImage = 'url("image/chat_app.png")';
-                    break;
-                case 'cgpa-calc':
-                    backgroundImage = 'url("image/cgpa_calculator.png")';
-                    break;
-                case 'amazon':
-                    backgroundImage = 'url("image/am.png")';
-                    break;
-                default:
-                    backgroundImage = '';
-            }
-            
-            projectImage.style.backgroundImage = backgroundImage;
-            playButton.style.display = 'block';
-        });
-    }
+// Dark mode toggle
+const themeToggle = document.querySelector('.theme-toggle');
+themeToggle.addEventListener('click', () => {
+    document.body.classList.toggle('dark-mode');
 });
-
- // Dark mode toggle
-    const themeToggle = document.querySelector('.theme-toggle');
-    themeToggle.addEventListener('click', () => {
-        document.body.classList.toggle('dark-mode');
-    });
-
 
 const list = document.querySelectorAll('.navigation ul li');
-        const indicator = document.querySelector('.indicator');
+const indicator = document.querySelector('.indicator');
 
-        function activeLink() {
-            list.forEach((item) => item.classList.remove('active'));
-            this.classList.add('active');
-            
-            // Add a subtle animation to the indicator
-            indicator.style.transition = 'transform 0.3s cubic-bezier(0.68, -0.55, 0.27, 1.55)';
-            
-            // Reset the animation after it completes
-            setTimeout(() => {
-                indicator.style.transition = 'transform 0.5s';
-            }, 300);
-        }
-
-        list.forEach((item) => item.addEventListener('click', activeLink));
-
-        // Add hover effect
-        list.forEach((item) => {
-            item.addEventListener('mouseenter', () => {
-                if (!item.classList.contains('active')) {
-                    item.style.transform = 'translateY(-5px)';
-                }
-            });
-            
-            item.addEventListener('mouseleave', () => {
-                if (!item.classList.contains('active')) {
-                    item.style.transform = 'translateY(0)';
-                }
-            });
-        });
-
-
-        document.querySelector('.toggle').onclick = function() {
-        this.parentNode.classList.toggle('active');
-        }
-
-//cube:
-// Three.js setup
-        const scene = new THREE.Scene();
-        const camera = new THREE.PerspectiveCamera(75, 1, 0.1, 1000);
-        const renderer = new THREE.WebGLRenderer({ canvas: document.getElementById('cube-canvas'), alpha: true });
-        renderer.setSize(260, 260); // Adjust size to match the canvas
-        renderer.setClearColor( 0x000000, 0 ); // Make background transparent
-
-        // Create a cube
-        const geometry = new THREE.BoxGeometry();
-        const material = new THREE.MeshBasicMaterial({ color: 0x0F766E, wireframe: true });
-        const cube = new THREE.Mesh(geometry, material);
-        scene.add(cube);
-
-        camera.position.z = 2;
-
-        // Animation
-        function animate() {
-            requestAnimationFrame(animate);
-            cube.rotation.x += 0.01;
-            cube.rotation.y += 0.01;
-            renderer.render(scene, camera);
-        }
-        animate();
+function activeLink() {
+    list.forEach((item) => item.classList.remove('active'));
+    this.classList.add('active');
     
+    // Add a subtle animation to the indicator
+    indicator.style.transition = 'transform 0.3s cubic-bezier(0.68, -0.55, 0.27, 1.55)';
+    
+    // Reset the animation after it completes
+    setTimeout(() => {
+        indicator.style.transition = 'transform 0.5s';
+    }, 300);
+}
 
-//background cube
+list.forEach((item) => item.addEventListener('click', activeLink));
+
+// Add hover effect
+list.forEach((item) => {
+    item.addEventListener('mouseenter', () => {
+        if (!item.classList.contains('active')) {
+            item.style.transform = 'translateY(-5px)';
+        }
+    });
+    
+    item.addEventListener('mouseleave', () => {
+        if (!item.classList.contains('active')) {
+            item.style.transform = 'translateY(0)';
+        }
+    });
+});
+
+document.querySelector('.toggle').onclick = function() {
+    this.parentNode.classList.toggle('active');
+}
+
+// Animation
+function animate() {
+    requestAnimationFrame(animate);
+    cube.rotation.x += 0.01;
+    cube.rotation.y += 0.01;
+    renderer.render(scene, camera);
+}
+animate();
+
+// Background cube
 function createCube() {
-            const cube = document.createElement('div');
-            cube.className = 'cube';
-            for (let i = 0; i < 14; i++) {
-                const edge = document.createElement('div');
-                edge.className = 'edge';
-                cube.appendChild(edge);
-            }
-            cube.style.left = `${Math.random() * 100}vw`;
-            cube.style.top = `${Math.random() * 100}vh`;
-            cube.style.animationDuration = `${15 + Math.random() * 15}s`;
-            document.body.appendChild(cube);
-        }
+    const cube = document.createElement('div');
+    cube.className = 'cube';
+    for (let i = 0; i < 14; i++) {
+        const edge = document.createElement('div');
+        edge.className = 'edge';
+        cube.appendChild(edge);
+    }
+    cube.style.left = `${Math.random() * 100}vw`;
+    cube.style.top = `${Math.random() * 100}vh`;
+    cube.style.animationDuration = `${15 + Math.random() * 15}s`;
+    document.body.appendChild(cube);
+}
 
-        for (let i = 0; i < 40; i++) {
-            createCube();
-        }
+for (let i = 0; i < 40; i++) {
+    createCube();
+}
 
 // Menu Toggle Functionality
-        const menuToggle = document.querySelector('.menu-toggle');
-        const navigation = document.querySelector('.navigation');
-        const overlay = document.querySelector('.overlay');
-        const menuIcon = menuToggle.querySelector('i');
+const menuToggle = document.querySelector('.menu-toggle');
+const navigation = document.querySelector('.navigation');
+const overlay = document.querySelector('.overlay');
+const menuIcon = menuToggle.querySelector('i');
 
-        function toggleMenu() {
-            navigation.classList.toggle('active');
-            overlay.classList.toggle('active');
-            menuIcon.classList.toggle('fa-bars');
-            menuIcon.classList.toggle('fa-times');
+function toggleMenu() {
+    navigation.classList.toggle('active');
+    overlay.classList.toggle('active');
+    menuIcon.classList.toggle('fa-bars');
+    menuIcon.classList.toggle('fa-times');
+}
+
+menuToggle.addEventListener('click', toggleMenu);
+overlay.addEventListener('click', toggleMenu);
+
+// Handle navigation items
+const navLinks = document.querySelectorAll('.navigation li a');
+navLinks.forEach(link => {
+    link.addEventListener('click', () => {
+        // Remove active class from all links
+        navLinks.forEach(l => l.parentElement.classList.remove('active'));
+        // Add active class to clicked link
+        link.parentElement.classList.add('active');
+        // Close menu on mobile
+        if (window.innerWidth <= 968) {
+            toggleMenu();
         }
-
-        menuToggle.addEventListener('click', toggleMenu);
-        overlay.addEventListener('click', toggleMenu);
-
-        // Handle navigation items
-        const navLinks = document.querySelectorAll('.navigation li a');
-        navLinks.forEach(link => {
-            link.addEventListener('click', () => {
-                // Remove active class from all links
-                navLinks.forEach(l => l.parentElement.classList.remove('active'));
-                // Add active class to clicked link
-                link.parentElement.classList.add('active');
-                // Close menu on mobile
-                if (window.innerWidth <= 968) {
-                    toggleMenu();
-                }
-            });
-        });
-
-        // Close menu when clicking outside
-        document.addEventListener('click', (e) => {
-            if (!navigation.contains(e.target) && 
-                !menuToggle.contains(e.target) && 
-                navigation.classList.contains('active')) {
-                toggleMenu();
-            }
-        });
-
-
+    });
 });
+
+// Close menu when clicking outside
+document.addEventListener('click', (e) => {
+    if (!navigation.contains(e.target) && 
+        !menuToggle.contains(e.target) && 
+        navigation.classList.contains('active')) {
+        toggleMenu();
+    }
+});
+
+// Stars
+const starsContainer = document.getElementById('stars-container');
+const numStars = 50;
+
+function createStarSVG() {
+    const svgNS = "http://www.w3.org/2000/svg";
+    const svg = document.createElementNS(svgNS, "svg");
+    svg.setAttribute("viewBox", "0 0 100 100");
+    svg.setAttribute("width", "30");
+    svg.setAttribute("height", "30");
+    svg.setAttribute("class", "star");
+
+    const g = document.createElementNS(svgNS, "g");
+    for (let i = 0; i < 12; i++) {
+        const line = document.createElementNS(svgNS, "line");
+        line.setAttribute("x1", "50");
+        line.setAttribute("y1", "50");
+        line.setAttribute("x2", "50");
+        line.setAttribute("y2", "5");
+        line.setAttribute("stroke", "#ff6600");
+        line.setAttribute("stroke-width", "5");
+        line.setAttribute("transform", `rotate(${i * 30} 50 50)`);
+        g.appendChild(line);
+    }
+    svg.appendChild(g);
+
+    return svg;
+}
+
+function createStar() {
+    const star = createStarSVG();
+    star.style.left = `${Math.random() * 100}%`;
+    star.style.top = `${Math.random() * 100}%`;
+    starsContainer.appendChild(star);
+    return star;
+}
+
+function moveStar(star) {
+    const x = parseFloat(star.style.left);
+    const y = parseFloat(star.style.top);
+    const dx = (Math.random() - 0.5) * 0.1;
+    const dy = (Math.random() - 0.5) * 0.1;
+
+    star.style.left = `${(x + dx + 100) % 100}%`;
+    star.style.top = `${(y + dy + 100) % 100}%`;
+    star.style.transform = `rotate(${Math.random() * 360}deg)`;
+}
+
+const stars = Array.from({length: numStars}, createStar);
+
+function animateStars() {
+    stars.forEach(moveStar);
+    requestAnimationFrame(animateStars);
+}
+
+animateStars();
