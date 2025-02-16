@@ -127,9 +127,9 @@
 
 .light-mode {
   /* Background Colors */
-    --surface-ground: #E3ECE7;    /* Soft Muted Mint */
-  --surface-base: #B0D1C5;      /* Subtle Sage */
-  --surface-elevated: #8CB6A5;  /* Deep Teal Gray */
+  --surface-ground: #E3ECE7;    /* Soft Muted Mint */
+  --surface-base: #A8B5AE;      /* Elegant Muted Sage Gray */
+  --surface-elevated: #8aa097;  /* Deep Luxurious Teal-Green */
 
   --surface-overlay: rgba(255, 255, 255, 0.85); /* Glass Effect */
 
