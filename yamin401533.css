@@ -940,44 +940,51 @@ h2 {
     }
 }
 
-/* ==========================================================================
-   Projects Section
+
+/* ========================================================================== 
+   Projects Section 
    ========================================================================== */
 
 .projects-grid {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-    gap: 2rem;
-    margin-bottom: 2rem;
+    grid-template-columns: repeat(auto-fit, minmax(340px, 1fr));
+    gap: 2.5rem;
+    margin: 3rem 0;
+    padding: 0 1rem;
 }
 
 .project-card {
     background-color: var(--surface-elevated);
-    border-radius: 12px;
+    border: 1px solid rgba(45, 212, 191, 0.1);
+    border-radius: var(--radius-lg);
     overflow: hidden;
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    transition: transform 0.5s ease, box-shadow 0.3s ease;
     display: flex;
     flex-direction: column;
     height: 100%;
-    padding: 5px;
+    padding: var(--space-2);
+    box-shadow: var(--shadow-md);
 }
 
 .project-card:hover {
     transform: translateY(-5px);
-    box-shadow: 5px 5px 15px rgba(45, 212, 191, 0.3);
+    box-shadow: var(--shadow-lg);
 }
 
 .project-image {
     width: 100%;
-    height: 200px;
-    border-radius: 12px;
+    height: 240px;
+    border-radius: var(--radius-md);
     background-position: center;
-    transition: transform 0.3s ease;
     background-size: cover;
-    box-shadow: 0 2px 4px rgba(45, 212, 191, 0.1);
+    transition: transform 0.5s cubic-bezier(0.4, 0, 0.2, 1);
     position: relative;
     overflow: hidden;
     cursor: pointer;
+}
+
+.project-card:hover .project-image {
+    transform: scale(1.05);
 }
 
 .video-player {
@@ -986,97 +993,103 @@ h2 {
     left: 0;
     width: 100%;
     height: 100%;
-    border-radius: 12px;
+    border-radius: var(--radius-md);
 }
 
 .play-button {
     position: absolute;
     top: 50%;
     left: 50%;
-    transform: translate(-50%, -50%);
-    width: 50px;
-    height: 50px;
-    cursor: pointer;
-    z-index: 1;
+    transform: translate(-50%, -50%) scale(0.9);
+    width: 60px;
+    height: 60px;
+    opacity: 0;
+    transition: all 0.3s ease;
+}
+
+.project-image:hover .play-button {
+    opacity: 1;
+    transform: translate(-50%, -50%) scale(1);
 }
 
 .play-button svg {
     width: 100%;
     height: 100%;
-    fill: rgba(0, 0, 0, 0.3);
 }
 
 .play-button svg circle {
-    stroke-dasharray: 180;
-    stroke-dashoffset: 180;
-    transition: stroke-dashoffset 0.3s ease;
-    fill: var(--accent-color);
+    stroke-width: 2;
+    stroke: var(--surface-elevated);
+    fill: rgba(45, 212, 191, 0.9);
 }
 
 .play-button svg polygon {
-    fill: var(--accent-color);
-}
-
-.play-button:hover svg circle {
-    stroke-dashoffset: 0;
-}
-
-.project-card:hover .project-image {
-    transform: scale(1.1);
+    fill: var(--surface-elevated);
 }
 
 .project-content {
-    padding: 1.5rem;
+    padding: var(--space-4);
     flex-grow: 1;
     display: flex;
     flex-direction: column;
 }
 
 .project-content h3 {
-    color: var(--primary-color);
-    margin-bottom: 0.5rem;
+    color: var(--brand-primary);
+    margin-bottom: var(--space-2);
+    font-size: var(--font-size-lg);
+    font-weight: var(--font-weight-semibold);
+    letter-spacing: -0.02em;
+    text-transform: uppercase;
+    text-shadow: 0 1px 2px rgba(0, 0, 0, 0.2);
+    text-align: center; 
 }
 
 .project-content p {
     flex-grow: 1;
-    margin-bottom: 1rem;
-}
-
-.project-link {
-    color: var(--brand-primary-dark); /* Light Green */
-    text-decoration: none;
-    font-weight: bold;
-    transition: color 0.3s ease, transform 0.3s ease;
-    text-align: center;
-    padding: 0.5rem 1rem;
-    border: 1.3px solid var(--brand-primary-dark); /* Professional Green */
-    border-radius: 0.5rem; /* Medium radius */
-    display: inline-block;
-    margin: 0 auto; /* Center the element horizontally */
-}
-
-.project-link:hover {
-    color: var(--brand-secondary-dark); /* Slate */
-    border-color: var(--brand-primary-dark); /* Slate */
-    transform: translateY(-3px);
-    background-color: var(--brand-primary-dark); /* Professional Green */
+    margin-bottom: var(--space-4);
+    color: var(--text-medium-contrast);
+    font-size: var(--font-size-base);
 }
 
 .project-tools {
     display: flex;
     flex-wrap: wrap;
-    gap: 0.5rem;
-    margin-bottom: 1rem;
-    justify-content: center; /* Center the language box */
+    gap: var(--space-2);
+    margin-bottom: var(--space-4);
+    justify-content: center;
 }
 
 .project-tools span {
-    background-color: var(--brand-primary-dark); /* Light Green */
-    color: var(--text-inverted); /* White */
-    padding: 0.3rem 0.6rem;
-    border-radius: 0.3rem;
-    font-size: 0.875rem;
-    font-weight: 600;
+    background-color: rgba(45, 212, 191, 0.1);
+    color: var(--brand-primary);
+    padding: var(--space-1) var(--space-2);
+    border-radius: var(--radius-sm);
+    font-size: var(--font-size-sm);
+    font-weight: var(--font-weight-semibold);
+}
+
+.project-link {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    padding: var(--space-2) var(--space-4);
+    border: 1px solid none;
+    border-radius: var(--radius-md);
+    color: var(--brand-secondary-dark);
+    font-weight: var(--font-weight-bold);
+    text-decoration: none;
+    transition: all 0.3s ease;
+    width: fit-content;
+    gap: 0.5rem;
+    margin: 0 auto;
+    box-shadow: var(--shadow-md);
+}
+
+.project-link:hover {
+    background-color: var(--brand-primary-dark);
+    color: var(--brand-secondary-dark);
+    transform: translateY(-3px);
 }
 
 /* Responsive Design */
@@ -1090,25 +1103,25 @@ h2 {
     }
 
     .project-content {
-        padding: 1rem;
+        padding: var(--space-3);
     }
 
     .project-content h3 {
-        font-size: 1.25rem;
+        font-size: var(--font-size-base);
     }
 
     .project-content p {
-        font-size: 1rem;
+        font-size: var(--font-size-sm);
     }
 
     .project-link {
-        font-size: 1rem;
-        padding: 0.5rem 1rem;
+        font-size: var(--font-size-sm);
+        padding: var(--space-2) var(--space-3);
     }
 
     .project-tools span {
-        font-size: 0.75rem;
-        padding: 0.2rem 0.4rem;
+        font-size: var(--font-size-xs);
+        padding: var(--space-1) var(--space-1);
     }
 }
 
