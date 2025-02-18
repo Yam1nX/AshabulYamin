@@ -127,9 +127,11 @@
 
 .light-mode {
   /* Background Colors */
-  --surface-ground: #E3ECE7;    /* Soft Muted Mint */
+    --surface-ground: #F2F2F2;    /* Clean, Soft Platinum */
   --surface-base: #A8B5AE;      /* Elegant Muted Sage Gray */
   --surface-elevated: #8aa097;  /* Deep Luxurious Teal-Green */
+
+
 
   --surface-overlay: rgba(255, 255, 255, 0.85); /* Glass Effect */
 
@@ -336,6 +338,7 @@ header.scrolled {
   padding: 0.5rem 1rem;
   border-radius: 8px;
   transition: all 0.3s ease;
+  box-shadow: 0 4px 15px var(--surface-elevated);
 }
 
 .navigation ul li a:hover {
@@ -347,6 +350,26 @@ header.scrolled {
 .navigation ul li.active a {
   background-color: var(--brand-primary);
   color: var(--text-inverted);
+}
+
+.download-cv {
+  background: linear-gradient(135deg, var(--brand-primary-dark), var(--brand-secondary-dark));
+  color: var(--white);
+  padding: 0.75rem 1.5rem;
+  border-radius: 50px;
+  text-decoration: none;
+  font-weight: 500;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 15px rgba(79, 70, 229, 0.2);
+}
+
+.download-cv:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 6px 20px rgba(79, 70, 229, 0.3);
+  border:1px solid var(--brand-secondary-dark);
 }
 
 /* Menu Toggle (Hamburger Icon) */
@@ -400,8 +423,8 @@ header.scrolled {
 
   .navigation.active {
     right: 0;
-    background-color: var(--brand-primary-dark);
-    height: 80vh;
+    background-color: var(--brand-secondary);
+    height: auto;
     width: auto;
     border: #09332d;
     border-radius: 12px 0px 0px 12px;
