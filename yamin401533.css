@@ -950,7 +950,6 @@ h2 {
     grid-template-columns: repeat(auto-fit, minmax(340px, 1fr));
     gap: 2.5rem;
     margin: 3rem 0;
-    padding: 0 1rem;
 }
 
 .project-card {
