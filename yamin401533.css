@@ -1182,7 +1182,7 @@ footer {
 }
 
 .social-icon:hover {
-    color: var(--secondary-color);
+    color: var(--brand-primary-dark);
     transform: translateY(-2px);
 }
 
