@@ -405,7 +405,7 @@ header.scrolled {
 }
 
 /* Responsive Design */
-@media (max-width: 768px) {
+@media (max-width: 1188px) {
   .navigation {
     position: fixed;
     top: 0;
