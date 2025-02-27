@@ -66,6 +66,25 @@ function initMenuToggle() {
 
 
 
+// Download CV Function
+const downloadButtons = document.querySelectorAll('.download-cv');
+downloadButtons.forEach(button => {
+    button.addEventListener('click', (e) => {
+        e.preventDefault();
+        // Replace 'path-to-your-cv.pdf' with your actual CV file path
+        const cvPath = 'path-to-your-cv.pdf';
+        const link = document.createElement('a');
+        link.href = cvPath;
+        link.download = 'YourName-CV.pdf';
+        document.body.appendChild(link);
+        link.click();
+        document.body.removeChild(link);
+    });
+});
+
+
+
+
 // Sticky Header Functionality
 function initStickyHeader() {
     const header = document.querySelector('header');
@@ -171,13 +190,22 @@ function initFormSubmission() {
     }
 }
 
+
+
 // Dark Mode Toggle Functionality
 function initDarkModeToggle() {
     const themeToggle = document.querySelector('.theme-toggle');
     if (themeToggle) {
         themeToggle.addEventListener('click', () => {
-            document.body.classList.toggle('light-mode');
+            const isLightMode = document.body.classList.toggle('light-mode');
+            themeToggle.textContent = isLightMode ? '🌙' : '☀️';
         });
+
+        // Set the initial icon based on the current mode
+        const isLightMode = document.body.classList.contains('light-mode');
+        themeToggle.textContent = isLightMode ? '🌙' : '☀️';
     }
 }
+
+
 
