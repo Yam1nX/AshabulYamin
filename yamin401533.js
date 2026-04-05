@@ -198,12 +198,12 @@ function initDarkModeToggle() {
     if (themeToggle) {
         themeToggle.addEventListener('click', () => {
             const isLightMode = document.body.classList.toggle('light-mode');
-            themeToggle.textContent = isLightMode ? '🌙' : '☀️';
+            themeToggle.textContent = isLightMode ? '🌖' : '🌒';
         });
 
         // Set the initial icon based on the current mode
         const isLightMode = document.body.classList.contains('light-mode');
-        themeToggle.textContent = isLightMode ? '🌙' : '☀️';
+        themeToggle.textContent = isLightMode ? '🌖' : '🌒';
     }
 }
 
